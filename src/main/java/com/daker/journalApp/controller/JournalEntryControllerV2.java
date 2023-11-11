@@ -46,8 +46,8 @@ public class JournalEntryControllerV2 {
 
         JournalEntity old = journalEntryService.findById(myId).orElse(null);
         if(old!=null){
-            old.setTitle(myEntry.getTitle() !=null && myEntry.getTitle().equals("")?myEntry.getTitle():old.getTitle());
-            old.setContent(myEntry.getContent() !=null && myEntry.getContent().equals("")?myEntry.getContent():old.getContent());
+            old.setTitle(myEntry.getTitle() !=null && !myEntry.getTitle().equals("")?myEntry.getTitle():old.getTitle());
+            old.setContent(myEntry.getContent() !=null && !myEntry.getContent().equals("")?myEntry.getContent():old.getContent());
 
         }
         journalEntryService.saveEntry(old);
