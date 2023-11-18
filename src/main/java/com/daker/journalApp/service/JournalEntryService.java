@@ -4,11 +4,13 @@ import com.daker.journalApp.entity.JournalEntity;
 import com.daker.journalApp.repository.JournalEntryRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
+@Service
 public class JournalEntryService {
     @Autowired
     private JournalEntryRepository journalEntryRepository;
@@ -27,6 +29,8 @@ public class JournalEntryService {
     }
 
     public Optional<JournalEntity> findById(ObjectId id){
+
+
         return journalEntryRepository.findById(id);
     }
 
