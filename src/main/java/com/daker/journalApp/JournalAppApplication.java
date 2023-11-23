@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 @SpringBootApplication()
 @ComponentScan(basePackages = "com.daker.journalApp")
-
 public class JournalAppApplication {
 
 	public static void main(String[] args) {
